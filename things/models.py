@@ -11,6 +11,6 @@ class Thing(models.Model):
 
     description = models.CharField(max_length=120, blank=True)
     quantity = models.IntegerField(validators=[
-        MinValueValidator(1, "Value cannot be more than 0"),
+        MinValueValidator(0, "Value cannot be more than 0"),
         MaxValueValidator(100, "Value cannot be less than 100"),
     ])
